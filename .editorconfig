@@ -271,3 +271,9 @@ dotnet_diagnostic.IDE0320.severity = none
 
 # CA5394: Do not use insecure randomness
 dotnet_diagnostic.CA5394.severity = none
+
+# S125: Sections of code should not be commented out
+dotnet_diagnostic.S125.severity = none
+
+# CA1062: Validate arguments of public methods
+dotnet_diagnostic.CA1062.severity = none

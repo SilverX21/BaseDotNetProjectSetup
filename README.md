@@ -65,3 +65,7 @@ Base .NET project setup
 	- The Dockerfile is used to build the image for the project, and the .dockerignore file is used to ignore files that are not needed in the image.
 	- The Dockerfile is already configured to use the `mcr.microsoft.com/dotnet/aspnet:9.0` image as the base image, and it will copy the project files to the image and run the project
 
+8- To add a docker compose file to the solution, right click on the project you want, in this case it will be the `Web.Api` and select `Add` -> `Docker Compose`
+	- This will add a docker-compose.yml file to the solution, and a .dockerignore file
+	- The docker-compose.yml file is used to define the services that will be run in the containers, and the .dockerignore file is used to ignore files that are not needed in the image
+	- The docker-compose.yml file is already configured to use the `mcr.microsoft.com/dotnet/aspnet:9.0` image as the base image, and it will copy the project files to the image and run the project

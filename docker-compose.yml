@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  web.api:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: Web.Api/Dockerfile #here we are adding our docker file of the web api to the orchestration
+  postgres:
+    image: postgres:latest #here we are using the latest version of postgres
+    environment:
+      POSTGRES_USER: demodatabase
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # the volume is to persist the data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+    driver: local   # "local" is the default, so you can even omit this line
