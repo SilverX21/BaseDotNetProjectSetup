@@ -69,3 +69,7 @@ Base .NET project setup
 	- This will add a docker-compose.yml file to the solution, and a .dockerignore file
 	- The docker-compose.yml file is used to define the services that will be run in the containers, and the .dockerignore file is used to ignore files that are not needed in the image
 	- The docker-compose.yml file is already configured to use the `mcr.microsoft.com/dotnet/aspnet:9.0` image as the base image, and it will copy the project files to the image and run the project
+
+Here are some useful links:
+- [Directory.Build.props](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview#directorybuildprops)
+- [Milan's approach to centralized packages management](https://www.milanjovanovic.tech/blog/central-package-management-in-net-simplify-nuget-dependencies)
